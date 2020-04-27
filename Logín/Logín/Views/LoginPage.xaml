@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Logín.LoginPage">
+    <ContentPage.Content>
+        <ScrollView HeightRequest="300">
+        <Grid>
+            <Image Source="fondo.jpg" Aspect="AspectFill" />
+                <BoxView Color="#FFFFFF" Opacity="0.8" />
+            <Grid>
+                <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Source="skdeysuLogo.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30" />
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry Placeholder="Correo Electronico" PlaceholderColor="Black" x:Name="Correo"/>
+                        <Entry Placeholder="Contraseña" PlaceholderColor="Black" IsPassword="True" x:Name="Password"/>
+                        <Button Text="Iniciar Sesión" BackgroundColor="#3C6EFF" BorderRadius="20" TextColor="White" Clicked="Handle_Clicked_1"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="No tienes cuenta? Haz Click Aquí !" HorizontalOptions="EndAndExpand" FontAttributes="Bold" Opacity="0.8" TextColor="White" Margin="10,10,10,10" BackgroundColor="#3C6EFF" Clicked="Handle_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,50">
+                        <Label Text="SK DEYSU" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30" TextColor="Blue"/>
+
+                </StackLayout>
+                
+            </Grid> 
+       </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

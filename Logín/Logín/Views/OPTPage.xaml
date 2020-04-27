@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Logín.Views.OPTPage"
+             Title="--OPT--">
+    <ContentPage.Content>
+        <ScrollView HeightRequest="300">
+            <Grid>
+                <Image Source="fondo.jpg" Aspect="AspectFill" />
+                <BoxView Color="#FFFFFF" Opacity="0.8" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Source="skdeysuLogo.png" WidthRequest="50" HeightRequest="50" Margin="0,0,0,0" />
+
+                    <StackLayout Grid.Row="1" Padding="20,10">
+
+                        <Label>DATOS DEL EMPLEADOR</Label>
+                        <Entry Placeholder="Razón Social" PlaceholderColor="Black" x:Name="EntryRazon" />
+                        <Entry  Placeholder="Domicilio" PlaceholderColor="Black" x:Name="EntryDomicilio"  />
+                        <Entry  Placeholder="Actividad Economica" PlaceholderColor="Black" x:Name="EntryActividad"  />
+                        <Entry  Placeholder="Número de Trabajadores" PlaceholderColor="Black" x:Name="EntryNumero"  />
+                        <Entry  Placeholder="Sede" PlaceholderColor="Black" x:Name="EntrySede" />
+                        <Entry  Placeholder="RUC" PlaceholderColor="Black" x:Name="EntryRuc"/>
+                        <Entry  Placeholder="Centro de Costo" PlaceholderColor="Black" x:Name="EntryCentroCosto"/>
+                        <Entry  Placeholder="Ubicación del Proyecto / SEDE " PlaceholderColor="Black" x:Name="EntryUbicacion"/>
+                        <Entry  Placeholder="Nombre del PETS(Procedimiento escritorio de trabajo seguro) Observado" PlaceholderColor="Black" x:Name="EntryNomPets"/>
+                        <DatePicker x:Name="pickerFecha1" DateSelected="PickerFecha1_DateSelected"/>
+                        <Entry  Placeholder="Ocupación / Tiempo del Trabajo Observ" PlaceholderColor="Black" x:Name="EntryOcupa"/>
+                        <Label >DESARROLLO DE LA OBSERVACIÓN</Label>
+                        <Entry Placeholder="¿ Se cuenta con los EPP-herramientas requeridas por el procedimiento para la tarea ?" PlaceholderColor="Black" x:Name="EntryPregu1" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome1" />
+                        <Entry Placeholder="¿ El personal ha sido capacitado en el PETS ?" PlaceholderColor="Black" x:Name="EntryPregu2" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome2" />
+                        <Entry Placeholder="¿ El PETS se encuentra aprobado y en versión vigente ?" PlaceholderColor="Black" x:Name="EntryPregu3" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome3" />
+                        <Entry Placeholder="¿ Se han realizado todos lo pasos descritos en el PETS ?" PlaceholderColor="Black" x:Name="EntryPregu4" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome4" />
+                        <Entry Placeholder="¿ Se ha realizado el bloqueo de acuerdo a lo requerido en el PETS ?" PlaceholderColor="Black" x:Name="EntryPregu5" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome5" />
+                        <Entry Placeholder="¿ Se ha realizado el IPERC CONTINUO antes de inicio de la tarea ?" PlaceholderColor="Black" x:Name="EntryPregu6" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome6" />
+                        <Entry Placeholder="¿ Se ha emitido los permisos de trabajo requeridos antes de inicio de la tarea ?" PlaceholderColor="Black" x:Name="EntryPregu7" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome7" />
+                        <Entry Placeholder="¿ El personal cuenta con las calificaciones requeridas para la tarea ?" PlaceholderColor="Black" x:Name="EntryPregu8" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome8" />
+                        <Entry Placeholder="¿El área de trabajo se encuentra señalizada ?" PlaceholderColor="Black" x:Name="EntryPregu9" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome9" />
+                        <Entry Placeholder="¿El área cuenta con una estación de emergencia en caso de ser necesario ?" PlaceholderColor="Black" x:Name="EntryPregu10" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome10" />
+                        <Entry Placeholder="¿La segregación de residuos es la adecuada ?" PlaceholderColor="Black" x:Name="EntryPregu11" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome11" />
+                        <Entry Placeholder="¿El área de trabajo se encuentra limpia y ordenada ?" PlaceholderColor="Black" x:Name="EntryPregu12" />
+                        <Entry Placeholder="Comentario" PlaceholderColor="Black" x:Name="EntryCome12" />
+                        <Entry Placeholder="Recomendaciones" PlaceholderColor="Black" x:Name="EntryRecomen" />
+                        <Entry Placeholder="Responsable" PlaceholderColor="Black" x:Name="EntryResponsable" />
+                        <DatePicker x:Name="pickerFecha2" DateSelected="PickerFecha1_DateSelected"/>
+                        <Label>ELABORADO POR: </Label>
+                        <Entry Placeholder="Cargo" PlaceholderColor="Black" x:Name="EntryCargo" />
+                        <Entry Placeholder="Nombres y Apellidos" PlaceholderColor="Black" x:Name="EntryNomApell" />
+                        <Button   HorizontalOptions="Center" Text="Tomar Foto" x:Name="irFoto" BackgroundColor="#3C6EFF" Clicked="IrFoto_Clicked" BorderRadius="20" TextColor="White" />
+                        <Button Text="Guardar OPT" BackgroundColor="#3C6EFF" BorderRadius="20" TextColor="White" Clicked="Button_Clicked" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Margin="0,0,0,50">
+                        <Label Text="SK DEYSU" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30" TextColor="Blue"/>
+                    </StackLayout>
+
+
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

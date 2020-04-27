@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Logín.Views.RegisterPage">
+    <ContentPage.Content>
+        <ScrollView HeightRequest="300">
+        <Grid>
+            <Image Source="fondo.jpg" Aspect="AspectFill" />
+                <BoxView Color="#FFFFFF" Opacity="0.8" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Source="skdeysuLogo.png" WidthRequest="100" HeightRequest="100" Margin="0,0,0,0" />
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                        <Entry Placeholder="Nombres" PlaceholderColor="Black" x:Name="EntryNombres" />
+                        <Entry Placeholder="Apellidos" PlaceholderColor="Black" x:Name="EntryApellidos" />
+                        <Entry Placeholder="DNI" PlaceholderColor="Black" x:Name="EntryDNI"/>
+                        <Entry Placeholder="Correo Corporativo" PlaceholderColor="Black" x:Name="EntryCorreo" />
+                        <Entry Placeholder="Número de Celular" PlaceholderColor="Black" x:Name="EntryCelular"  />
+                        <Entry Placeholder="Contraseña" PlaceholderColor="Black" IsPassword="True" x:Name="EntryPassword" />
+                        <Button Text="Crear Cuenta" BackgroundColor="#3C6EFF" BorderRadius="20" TextColor="White" Clicked="Button_Clicked"/>
+                    
+                </StackLayout>
+                <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Margin="0,0,0,50">
+                    <Label Text="SK DEYSU" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30" TextColor="Blue"/>
+
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

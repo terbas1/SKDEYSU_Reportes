@@ -1,0 +1,1 @@
+D:\App xamarin\Logín\Logín\Logín.UWP\Logín.UWP.csproj;x86

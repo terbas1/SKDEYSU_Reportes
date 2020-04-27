@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Logín.Views.InspecSeguridadPage"
+             Title="--Inspección de Seguridad--">
+    <ContentPage.Content>
+        <ScrollView HeightRequest="300">
+            <Grid>
+                <Image Source="fondo.jpg" Aspect="AspectFill" />
+                <BoxView Color="#FFFFFF" Opacity="0.8" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Source="skdeysuLogo.png" WidthRequest="50" HeightRequest="50" Margin="0,0,0,0" />
+
+                    <StackLayout Grid.Row="1" Padding="20,10">
+                        <Label>IDENTIFICACIÓN</Label>
+                        <Entry Placeholder="Razón Social" PlaceholderColor="Black" x:Name="EntryRaz" />
+                        <Entry  Placeholder="RUC" PlaceholderColor="Black" x:Name="EntryRucc"/>
+                        <Entry  Placeholder="Domicilio" PlaceholderColor="Black" x:Name="EntryDomi"  />
+                        <Entry  Placeholder="Actividad Economica" PlaceholderColor="Black" x:Name="EntryActividadd" />
+                        <Entry  Placeholder="Número de Trabajadores" PlaceholderColor="Black" x:Name="EntryNumeroo" />
+                        <DatePicker x:Name="pickerFecha1" DateSelected="PickerFecha1_DateSelected"/>
+                        <Entry  Placeholder="Hora" x:Name="EntryHora" PlaceholderColor="Black"  />
+                        <Entry  Placeholder="Area Inspeccionada(Lugar de la Inspección)" PlaceholderColor="Black" x:Name="EntryAreaIns"/>
+                        <Entry  Placeholder="Responsable de la Inspección" PlaceholderColor="Black" x:Name="EntryRespInsp"/>
+                        <Label>Tipo de Inspección</Label>
+                        <Picker x:Name="pickerTipoInsp" Title="--Selecciona el Tipo de Inspección--" >
+                            <Picker.ItemsSource >
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Planeada</x:String>
+                                    <x:String>No Planeada</x:String>
+                                    <x:String>Otros</x:String>
+                                 </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Label>RESGISTRO</Label>
+                        <Entry  Placeholder="Responsables de la Inspección" PlaceholderColor="Black" x:Name="EntryResInspParti"/>
+                        <Entry  Placeholder="Peligro Dectectado(Puede incluir fotografía)" PlaceholderColor="Black" x:Name="EntryPeligoDetec"/>
+                        <Entry  Placeholder="Número" PlaceholderColor="Black" x:Name="EntryNu"/>
+                        <Entry  Placeholder="Acción a Tomar" PlaceholderColor="Black" x:Name="EntryAcTom"/>
+                        <Entry  Placeholder="Responsable" PlaceholderColor="Black" x:Name="EntryRes"/>
+                        <DatePicker x:Name="pickerFechaPro" DateSelected="PickerFecha1_DateSelected"/>
+                        <DatePicker x:Name="pickerFechaCump" DateSelected="PickerFecha1_DateSelected"/>
+                        <Entry  Placeholder="Comentarios" PlaceholderColor="Black" x:Name="EntryComentarios"/>
+                        <Picker x:Name="pickerNivelRies" Title="--Nivel de Riesgo--" >
+                            <Picker.ItemsSource >
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Alto - Corregir en un máximo de 24 horas </x:String>
+                                    <x:String>Moderado- Corregir en un máximo de 72 horas</x:String>
+                                    <x:String>Bajo- Corregir en un máximo de 07 días </x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Entry  Placeholder="Descripción" PlaceholderColor="Black" x:Name="EntryDesc"/>
+                        <Label>Observación</Label>
+                        <Entry  Placeholder="Observación" PlaceholderColor="Black" x:Name="EntryObservacion"/>
+                        <Label>Responsable del Registro (controlado por )</Label>
+                        <DatePicker x:Name="pickerFechaRespo" DateSelected="PickerFecha1_DateSelected"/>
+                        <Entry  Placeholder="Nombre y Apellido" PlaceholderColor="Black" x:Name="EntryNomyApe"/>
+                        <Entry  Placeholder="Cargo" PlaceholderColor="Black" x:Name="EntryCargo"/>
+
+                        <Button HorizontalOptions="Center" Text="Tomar Foto" x:Name="irFoto" BackgroundColor="#3C6EFF" Clicked="IrFoto_Clicked" BorderRadius="20" TextColor="White" />
+                        <Button Text="Guardar OPT" BackgroundColor="#3C6EFF" BorderRadius="20" TextColor="White" Clicked="Button_Clicked" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Margin="0,0,0,50">
+                        <Label Text="SK DEYSU" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30" TextColor="Blue"/>
+                    </StackLayout>
+
+
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
